@@ -15,18 +15,18 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /opt/lampp/var/mysql/mysql.sock
 
 development:
   <<: *default
-  database: cuit-nanimus_development
+  database: cuit-nanimus-development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: cuit-nanimus_test
+  database: cuit-nanimus-test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: cuit-nanimus_production
+  database: cuit-nanimus-production
   username: cuit-nanimus
   password: <%= ENV['CUIT-NANIMUS_DATABASE_PASSWORD'] %>
