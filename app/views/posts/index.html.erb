@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<div class="index-content">
+  <% if user_signed_in? %>
+    <div class="page-header">
+      <%= link_to 'Create a note', new_post_path, class: "btn btn-lg btn-default" %>
+    </div>
+  <% end %>
+  <div class="container">
+    <% @posts.each_slice(3) do |rows| %>
+      <div class="col-md-12 row">
+        <% rows.each do |post| %>
+          <a href="<%= post_path(post) %>">
+            <div class="col-lg-4">
+              <div class="card">
+                <%= image_tag(post.photo.url(:original, timestamp: false), width: 150, height: 250) %>
+                <h4><%= post.title %></h4>
+                <p><%= post.content %></p>
+                <%= link_to 'Read More', post, class: "blue-button" %>
+              </div>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
