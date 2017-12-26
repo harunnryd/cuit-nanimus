@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+<div class="index-content">
+  <div class="container">
+    <div class="col-md row">
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag(@post.photo.url(:original, timestamp: false), width: 150, height: 250) %>
+          <h4>Fundamental</h4>
+          <p><%= @post.content %></p>
+          <%= link_to 'Free', "#", class: "blue-button" %>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag(@post.photo.url(:original, timestamp: false), width: 150, height: 250) %>
+          <h4>Object Oriented Programming</h4>
+          <p><%= @post.content %></p>
+          <%= link_to 'Free', "#", class: "blue-button" %>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag(@post.photo.url(:original, timestamp: false), width: 150, height: 250) %>
+          <h4>Ruby On Rails</h4>
+          <p><%= @post.content %></p>
+          <%= link_to 'Free', "#", class: "blue-button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel-group">
+ <div class="panel panel-default">
+   <div class="panel-heading">
+     <h4 class="panel-title">
+       Fundamental - <a class="btn btn-xs btn-warning" data-toggle="collapse" href="#collapse1">Show !</a>
+     </h4>
+   </div>
+   <div id="collapse1" class="panel-collapse collapse">
+     <ul class="list-group">
+       <li class="list-group-item">One</li>
+       <li class="list-group-item">Two</li>
+       <li class="list-group-item">Three</li>
+     </ul>
+   </div>
+ </div>
+
+ <div class="panel panel-default">
+   <div class="panel-heading">
+     <h4 class="panel-title">
+       Object Oriented Programming - <a class="btn btn-xs btn-warning" data-toggle="collapse" href="#collapse2">Show !</a>
+     </h4>
+   </div>
+   <div id="collapse2" class="panel-collapse collapse">
+     <ul class="list-group">
+       <li class="list-group-item">One</li>
+       <li class="list-group-item">Two</li>
+       <li class="list-group-item">Three</li>
+     </ul>
+   </div>
+ </div>
+
+ <div class="panel panel-default">
+   <div class="panel-heading">
+     <h4 class="panel-title">
+       Ruby On Rails Framework - <a class="btn btn-xs btn-warning" data-toggle="collapse" href="#collapse3">Show !</a>
+     </h4>
+   </div>
+   <div id="collapse3" class="panel-collapse collapse">
+     <ul class="list-group">
+       <li class="list-group-item">One</li>
+       <li class="list-group-item">Two</li>
+       <li class="list-group-item">Three</li>
+     </ul>
+   </div>
+ </div>
+</div>
